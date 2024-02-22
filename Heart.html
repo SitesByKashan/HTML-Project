@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart</title>
+    <style>
+      
+body {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+    margin: 0;
+    background-color: black;
+}
+  .text{
+    font-size: 100px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(62, 62, 240);
+    transform: rotate(45deg) scale(1);
+    animation: pulse 2s linear infinite;
+   
+}
+.text::after {
+   
+   background:inherit;
+   border-radius: 50%; 
+   content:'';
+   position:absolute;
+    top: -50%; 
+    left:0;
+   height: 100px;
+   width:100px;
+}
+.text::before {
+ 
+   background:inherit; 
+   border-radius: 50%; 
+   content:'';
+   position:absolute;
+   top:0; 
+   right:-50%; 
+   height: 100px;
+   width:100px;
+  
+}
+ 
+.heart {
+    background: red;
+    position: relative;
+    height: 100px;
+    width:100px;
+
+    transform: rotate(45deg) scale(1);
+    animation: pulse 2s linear infinite;
+}
+  
+  
+.heart::after {
+   
+    background:inherit;
+    border-radius: 50%; 
+    content:'';
+    position:absolute;
+     top: -50%; 
+     left:0;
+    height: 100px;
+    width:100px;
+}
+.heart::before {
+  
+    background:inherit; 
+    border-radius: 50%; 
+    content:'';
+    position:absolute;
+    top:0; 
+    right:-50%; 
+    height: 100px;
+    width:100px;
+   
+}
+
+  
+@keyframes pulse{
+    0% {
+        transform: rotate(-45deg) scale(1);
+        opacity: 0;
+    }
+    
+    50% {
+        transform: rotate(-45deg) scale(1.3);
+        opacity: 1;
+    }
+    
+    100% {
+        transform: rotate(-45deg) scale(1);
+        opacity: 1;
+    }
+}  
+
+
+ </style>
+</head>
+<body>
+     <span class="text">KASHAN</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class = "heart" ><br> </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class=" text">HAMNA </span>
+    
+</body>
+</html>
